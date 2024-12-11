@@ -23,7 +23,7 @@ export class SatchelThree {
 
 
     async getTodoSummaries(from: string, to: string) {
-        return await getTodoSummaries(this.httpClient, from, to);
+        return await getTodoSummaries(this.httpClient, this.formatDate(from), this.formatDate(to));
     }
 
     async getTodo(todoSummary: TodoSummary) {
@@ -32,6 +32,6 @@ export class SatchelThree {
 
 
     async getWeekTimetableFromDay(day: string) {
-        return await getWeekTimetableFromDay(this.httpClient, day);
+        return await getWeekTimetableFromDay(this.httpClient, this.formatDate(day));
     }
 }

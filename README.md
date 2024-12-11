@@ -6,9 +6,9 @@ _Because satchel two wasn't enough_
 
 | Two | Three ✨ |
 | --- | ----- |
-| Written in Dart | Written in Typescript |
+| Written in Dart (For Flutter) | Written in Typescript (For Anything) |
 | Confined by app | Reusable API and can be used anywhere |
-| Only supports class tasks | Supports Tasks and Timetable |
+| Only supports tasks | Supports Tasks and Timetable |
 | Has better data structure | Uses Satchel One data structure |
 
 # Planned Features
