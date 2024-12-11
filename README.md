@@ -4,7 +4,7 @@ _Because satchel two wasn't enough_
 
 # Improvements from Satchel Two
 
-| Two | Three |
+| Two | Three ✨ |
 | --- | ----- |
 | Written in Dart | Written in Typescript |
 | Confined by app | Reusable API and can be used anywhere |
