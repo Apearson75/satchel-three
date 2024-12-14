@@ -21,6 +21,10 @@ export class SatchelThree {
         return moment(new Date(time)).format("HH:mm");
     }
 
+    formatDescription(desc: string) {
+        return desc.replaceAll("<p>", "").replaceAll("</p>", "\n").replaceAll("<br>", "\n");
+    }
+
 
     async getTodoSummaries(from: string, to: string) {
         return await getTodoSummaries(this.httpClient, this.formatDate(from), this.formatDate(to));
