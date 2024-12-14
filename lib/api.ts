@@ -13,21 +13,21 @@ export class SatchelThree {
         this.httpClient = new HttpClient(authToken);
     }
 
-    formatDate(date: string | number) {
+    static formatDate(date: string | number) {
         return moment(new Date(date)).format("yyyy-MM-DD");
     }
 
-    formatTime(time: string | number) {
+    static formatTime(time: string | number) {
         return moment(new Date(time)).format("HH:mm");
     }
 
-    formatDescription(desc: string) {
+    static formatDescription(desc: string) {
         return desc.replaceAll("<p>", "").replaceAll("</p>", "\n").replaceAll("<br>", "\n");
     }
 
 
     async getTodoSummaries(from: string, to: string) {
-        return await getTodoSummaries(this.httpClient, this.formatDate(from), this.formatDate(to));
+        return await getTodoSummaries(this.httpClient, SatchelThree.formatDate(from), SatchelThree.formatDate(to));
     }
 
     async getTodo(todoSummary: TodoSummary) {
@@ -36,6 +36,6 @@ export class SatchelThree {
 
 
     async getWeekTimetableFromDay(day: string) {
-        return await getWeekTimetableFromDay(this.httpClient, this.formatDate(day));
+        return await getWeekTimetableFromDay(this.httpClient, SatchelThree.formatDate(day));
     }
 }
